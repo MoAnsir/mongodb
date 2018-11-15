@@ -16,8 +16,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     const db = client.db('TodoApp');
 
     // db.collection('Todos').insertOne({
-    //     test: 'Something to do',
-    //     completed: false
+    //     test: 'Walk the dog',
+    //     completed: true
     // }, (err, result) => {
     //     if(err){
     //         return console.log('Unable to insert to Todo', err);
@@ -28,7 +28,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
 
     // Insert new doc into users (name, age, location)
     // db.collection('Users').insertOne({
-    //     name: 'Lenny',
+    //     name: 'Henny',
     //     age: 65,
     //     location: 'London'
     // }, (err, result) => {

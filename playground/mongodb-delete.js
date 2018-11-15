@@ -8,12 +8,12 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     const db = client.db('TodoApp');
 
     // delete many
-    // db.collection('Todos').deleteMany({text: 'Eat lunch'}).then((result) => {
+    // db.collection('Todos').deleteMany({test: 'Something to do'}).then((result) => {
     //     console.log(result);
     // });
 
     // delete one
-    // db.collection('Todos').deleteOne({text: 'Eat lunch'}).then((result) => {
+    // db.collection('Todos').deleteOne({test: 'Something to do'}).then((result) => {
     //     console.log(result);
     // });
 
@@ -22,9 +22,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     //     console.log(result);
     // });
 
-    //db.collection('Users').deleteMany({name: 'Lenny'});
+    db.collection('Users').deleteMany({name: 'Penny'});
 
-    db.collection('Users').findOneAndDelete({_id: new ObjectID('5bd112b58f2b1216f0b3fe2a')}).then((result) => {
+    db.collection('Users').findOneAndDelete({_id: new ObjectID('5beb138b89435c47385361cf')}).then((result) => {
         console.log(JSON.stringify(result, undefined, 2));
     });
 
