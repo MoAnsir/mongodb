@@ -26,18 +26,18 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', { useNewUrlParser: true
     //     console.log(JSON.stringify(result.ops, undefined, 2));
     // });
 
-    // Insert new doc into users (name, age, location)
-    // db.collection('Users').insertOne({
-    //     name: 'Henny',
-    //     age: 65,
-    //     location: 'London'
-    // }, (err, result) => {
-    //     if(err){
-    //         return console.log('Unable to insert to Todo', err);
-    //     }
+    //Insert new doc into users (name, age, location)
+    db.collection('Users').insertOne({
+        name: 'Henny',
+        age: 65,
+        location: 'London'
+    }, (err, result) => {
+        if(err){
+            return console.log('Unable to insert to Todo', err);
+        }
 
-    //     console.log(result.ops[0]._id.getTimestamp());
-    // });
+        console.log(result.ops[0]._id.getTimestamp());
+    });
 
     client.close();
 });
